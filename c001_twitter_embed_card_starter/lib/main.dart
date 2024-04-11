@@ -74,7 +74,9 @@ class TwitterEmbedCard extends StatelessWidget {
         ),
 
         /// Reply Button
-        const ReplyButton(),
+        const ReplyButton(
+          replyCount: 12,
+        ),
       ],
     );
   }

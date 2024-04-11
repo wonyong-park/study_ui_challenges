@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ReplyButton extends StatelessWidget {
-  const ReplyButton({super.key});
+  final int replyCount;
+
+  const ReplyButton({required this.replyCount, super.key});
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +20,9 @@ class ReplyButton extends StatelessWidget {
           side: const BorderSide(color: Colors.black, width: 0.5),
         ),
         onPressed: () {},
-        child: const Text(
-          'Read 12 replies',
-          style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+        child: Text(
+          'Read ${replyCount.toString()} replies',
+          style: const TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
         ),
       ),
     );
